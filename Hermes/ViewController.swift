@@ -28,11 +28,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let statusView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kStatusBarH))
+        statusView.backgroundColor = .rgb(0, 51, 102)
+        view.addSubview(statusView)
+        
         if isPhoneX_Series {
-            let statusView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kStatusBarH))
-            statusView.backgroundColor = .rgb(0, 51, 102)
-            view.addSubview(statusView)
-            
             let y = kScreenHeight - kBottomMargin
             let bottomView = UIView(frame: CGRect(x: 0, y: y, width: kScreenWidth, height: kBottomMargin))
             bottomView.backgroundColor = .gray(250)
